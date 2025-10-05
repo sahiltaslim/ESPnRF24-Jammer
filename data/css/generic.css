@@ -1,0 +1,70 @@
+:root {
+  --bg-color: #0d0d12;
+  --container-bg: #1a1a20;
+  --text-color: #e0e0e0;
+  --accent-glow: #3f3f3f;
+  --button-base: #2a2a33;
+  --button-border: var(--text-color);
+  --button-shadow: #3c455c;
+  --border-radius: 12px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: grid;
+  place-content: center;
+  min-block-size: 100vh;
+  margin: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@font-face {
+  font-family: 'PixeloidSans';
+  src: url('fonts/PixeloidSans.ttf'); 
+}
+
+*, *::before, *::after {
+  font-family: 'PixeloidSans', sans-serif;
+  box-sizing: border-box;
+}
+
+.header, .text {
+  color: var(--text-color);
+  letter-spacing: 1px;
+  margin-block-end: 25px;
+}
+
+.header {
+  font-weight: 300;
+}
+
+.text {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 600;
+  display: inline-block;
+}
+
+.container {
+  text-align: center;
+  padding: 20px 20px;
+  margin-left: 10px;
+  border-radius: var(--border-radius);
+  background: var(--container-bg);
+  box-shadow: 0 5px 20px rgb(0 0 0 / 0.4);
+  max-inline-size: 400px;
+  inline-size: 95%;
+  border: 1px solid rgb(255 255 255 / 0.05);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    translate: 0 20px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

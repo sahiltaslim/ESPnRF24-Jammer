@@ -1,0 +1,79 @@
+body {
+  animation: none;
+}
+
+footer {
+  font-size: medium;
+  opacity: 0.4;
+}
+
+.header {
+  margin-block-end: 25px;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease-out, padding 0.4s ease-out;
+  background: transparent;
+  overflow: clip;
+  border-radius: var(--border-radius);
+}
+
+.dropdown.show {
+  grid-template-rows: 1fr;
+  margin-bottom: 20px;
+}
+
+.dropdown-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  padding-block-start: 10px;
+}
+        
+.dropdown-link {
+  background: var(--button-base);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  color: var(--text-color);
+  text-align: center;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, translate 0.2s ease, box-shadow 0.2s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.dropdown-inner .button-row .dropdown-link {
+  inline-size: 50%;
+}
+
+.dropdown-link:hover {
+  background-color: #353540;
+  translate: 0 -2px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.2);
+}
+
+.dropdown-link:active {
+  translate: 0 0;
+}
+
+.settings-button {
+  background-color: var(--button-base);
+  border-color: rgb(255 255 255 / 0.2);
+}
+
+.settings-button::before {
+  background: radial-gradient(circle, #0d71a7 0%, transparent 70%);
+}
+
+.fadein-body {
+  animation: fadeIn 1s forwards;
+  visibility: visible;
+}

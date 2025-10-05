@@ -1,0 +1,5 @@
+.vscode-ctags
+.vscode/
+.pio/
+
+#include/preferences.h

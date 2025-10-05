@@ -1,0 +1,68 @@
+.button {
+  display: block;
+  inline-size: 100%;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: translate 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              scale 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: var(--button-base);
+  color: var(--text-color);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  position: relative;
+  overflow: clip;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.2);
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease, scale 0.5s ease;
+  scale: 0;
+}
+
+.button:hover::before {
+  opacity: 0.15;
+  scale: 2;
+}
+
+.button:hover {
+  scale: 1.03;
+  translate: 0 -2px;
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.3);
+}
+
+.button:active {
+  scale: 0.98;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  inline-size: 100%;
+}
+
+.button-row .button {
+  inline-size: 50%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.active-button {
+  border: 2px solid var(--button-border) !important;
+  box-shadow: 0 0 15px var(--button-shadow) !important;
+  background-color: #2a2a33 !important;
+}

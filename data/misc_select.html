@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='/css/generic.css' rel='stylesheet'/>
+    <link href='/css/buttons.css' rel='stylesheet'/>
+    <link href='/css/inputs.css' rel='stylesheet'/>
+
+    <link href="/misc_jam.html" rel="prefetch">
+    <title>Misc Jammer Settings</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            Set Start/Stop Values
+        </div>
+        <input id="startInput" class="input" type="number" placeholder="Start (0-125)" max="125" min="0" />
+        <input id="stopInput" class="input" type="number" placeholder="Stop (0-125)" max="125" min="0" />
+        <button class="button" id="misc">
+            Jam
+        </button>
+    </div>
+    <div id="messageBox" class="message-box">
+        <p id="messageText"></p>
+        <button onclick="hideMessage()">
+            OK
+        </button>
+    </div>
+    <script src="/js/validate_redirect.js"></script>
+</body>
+</html>

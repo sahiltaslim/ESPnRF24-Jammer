@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Migitate FOUC */
+        body {
+            visibility: hidden;
+            opacity: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/generic.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/buttons.css"/>
+    
+    <link rel="preload" href="/css/inputs.css" as="style">
+    <link rel="preload" href="/css/sliders.css" as="style">
+    <link rel="preload" href="/js/txpower_slider.js" as="script">
+    <title>nRF24 Jammer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            nRF24 Jammer
+        </div>
+        <div class="buttons">
+            <a href="/wifi_select" class="button">
+                Wi-Fi (2,4GHz)
+            </a>
+            <div class="button-row">
+                <a href="/bluetooth_jam" class="button">
+                    Bluetooth
+                </a>
+                <a href="/ble_jam" class="button">
+                    Bluetooth LE
+                </a>
+            </div>
+            <a href="/drone_jam" class="button">
+                Drone jammer
+            </a>
+            <a href="/zigbee_jam" class="button">
+                Zigbee jammer
+            </a>
+            <a href="/misc_select" class="button">
+                Misc jammer
+            </a>
+            <button id="settingsButton" class="button settings-button">
+                Settings
+            </button>
+            <div id="settingsDropdown" class="dropdown">
+                <div class="dropdown-inner">
+                    <div class="button-row">
+                        <a href="/settings_bluetooth_jam" class="dropdown-link">
+                            Bluetooth settings
+                        </a>
+                        <a href="/settings_drone_jam" class="dropdown-link">
+                            Drone jam settings
+                        </a>
+                    </div>
+                    <div class="button-row">
+                        <a href="/settings_nrf24_config" class="dropdown-link">
+                            nRF24 Module Configuration
+                        </a>
+                        <a href="/settings_misc_jam" class="dropdown-link">
+                            AP/BL Jamming method
+                        </a>
+                    </div>
+                    <div class="button-row">
+                        <a href="/settings_txpower_config" class="dropdown-link">
+                            nRF24 Transmit power
+                        </a>
+                        <a href="/settings_access_point" class="dropdown-link">
+                            Access point settings
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            chickendrop89 @ GitHub
+        </footer>
+    </div>
+    <script src="./js/dropdown.js" defer></script>
+</body>
+</html>

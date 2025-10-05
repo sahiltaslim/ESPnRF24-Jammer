@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='/css/generic.css' rel='stylesheet'/>
+    <link href='/css/buttons.css' rel='stylesheet'/>
+    <link href='/css/inputs.css' rel='stylesheet'/>
+
+    <link href="/index.html" rel="prefetch">
+    <title>AP Configuration</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            AP Configuration
+        </div>
+
+        <div class="form-content">
+            <div class="input-group">
+                <label for="ssid" class="input-label">Access Point Name (SSID)</label>
+                <input type="text" id="ssid" class="input" value="[SSID_VALUE]" required minlength="1" maxlength="32">
+            </div>
+            <div class="input-group">
+                <label for="password" class="input-label">Password (Min 8 characters)</label>
+                <input type="text" id="password" class="input" value="[PASSWORD_VALUE]" minlength="8" maxlength="63">
+            </div>
+            <div class="input-group">
+                <label for="channel" class="input-label">Wi-Fi Channel (1-13)</label>
+                <input type="number" id="channel" class="input" value="[CHANNEL_VALUE]" min="1" max="13">
+            </div>
+            <button class="button" id="apply-button">
+                Apply and Reboot
+            </button>
+        </div>
+    </div>
+    <div id="messageBox" class="message-box">
+        <p id="messageText"></p>
+        <button id="closeButton">OK</button>
+    </div>
+    <script src="/js/validate_redirect.js"></script>
+</body>
+</html>

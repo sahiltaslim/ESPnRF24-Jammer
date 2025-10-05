@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='/css/generic.css' rel='stylesheet'/>
+    <link href='/css/buttons.css' rel='stylesheet'/>
+    <link href='/css/sliders.css' rel='stylesheet'/>
+
+    <link href="/index.html" rel="prefetch">
+    <title>Transmit power</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            Transmit power
+        </div>
+        <div class="slider-control">
+            <input type="range" id="txpower-slider" min="0" max="3" step="1" value="[TXPOWER_VALUE]">
+            <div id="slider-thumb">
+                <span id="slider-label">
+                    Low (-18dBm)
+                </span>
+            </div>
+        </div>
+        <button class="button" id="apply-button">
+            Apply
+        </button>
+    </div>
+    <script src="../js/txpower_slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='/css/generic.css' rel='stylesheet'/>
+    <link href='/css/buttons.css' rel='stylesheet'/>
+    <link href='/css/inputs.css' rel='stylesheet'/>
+
+    <link href="/wifi_jam.html" rel="prefetch">
+    <title>Select channel to jam</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            Jam Channel:
+        </div>
+        <input id="channelInput" class="input" type="number" placeholder="Channel (0-12)" max="12" min="0" />
+        <button class="button" id="wifi">
+            Submit
+        </button>
+    </div>
+    <div id="messageBox" class="message-box">
+        <p id="messageText"></p>
+        <button onclick="hideMessage()">
+            OK
+        </button>
+    </div>
+    <script src="/js/validate_redirect.js"></script>
+</body>
+</html>
