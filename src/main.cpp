@@ -13,7 +13,6 @@
  * GNU General Public License for more details.
 */
 #include <FreeRTOS.h>
-#include <semphr.h>
 #include <esp_bt.h>
 #include <SPIFFS.h>
 #include <Preferences.h>
