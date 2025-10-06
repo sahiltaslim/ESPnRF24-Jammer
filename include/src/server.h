@@ -16,7 +16,6 @@
 #define SERVER_H
 
 #include <WebServer.h>
-#include <RF24.h>
 
 void setupWebServer();
 

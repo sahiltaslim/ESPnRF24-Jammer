@@ -16,7 +16,6 @@
 #define MAIN_H
 
 #include <Preferences.h>
-#include <memory>
 
 void jammerTask(void* pvParameters); 
 void stopJamHandler();
