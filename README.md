@@ -11,6 +11,7 @@ A low-power 2,4GHz wireless jammer based on `ESP32` and `nRF24LO1+PA+LNA`
   - Drones
   - Custom frequency ranges
 - Configurable `TX` power in the interface
+- A captive portal to redirect user to the interface automatically
 - `SSD1306` OLED display support for basic status
 - Various configuration options
 - And more

@@ -52,6 +52,9 @@
  * (x) BOARD_ADDRESS: IP Address of the board for 
  * hosting the webserver
  *
+ * (x) CAPTIVE_PORTAL: whenever to automatically redirect/notify 
+ * the user to the web interface in browser
+ *
  * (x) BAD_BOARD_REVISION: Set this to 1 if your board has
  * problems with higher WLAN TxPower (e.g. high unreliability).
  * 
@@ -62,6 +65,7 @@
 #define DEFAULT_CHANNEL 13
 #define HIDDEN_SSID false
 
+#define CAPTIVE_PORTAL true
 #define BOARD_ADDRESS IPAddress(192, 168, 0, 1)
 #define BAD_BOARD_REVISION 1
 
@@ -112,6 +116,7 @@
  * Advanced preferences
 */
 #define WEBSERVER_PORT 80 // HTTP only
+#define DNS_PORT 53 // Unencrypted
 #define JAM_TEXT "xxxxxxxxxxxxxxxx"
 #define ENTRY_PAGE "index.html"
 #define NVS_NAME "jammer_config"

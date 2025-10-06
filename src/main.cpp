@@ -16,6 +16,7 @@
 #include <esp_bt.h>
 #include <SPIFFS.h>
 #include <Preferences.h>
+#include <DNSServer.h>
 
 #include "src/main.h"
 #include "src/jammer.h"
@@ -34,6 +35,7 @@ String ssid_method, password_method;
 TaskHandle_t jammerTaskHandle = NULL;
 SemaphoreHandle_t jammerSemaphore;
 Preferences preferences;
+DNSServer dnsServer;
 
 void halt_esp(){
     Serial.println("ESP halted. Check previous logs");
@@ -167,6 +169,10 @@ void setup() {
         halt_esp();
     }
     Serial.printf("Started the access point: %s\n", ssid_method.c_str());
+    
+    #if defined(CAPTIVE_PORTAL)
+    dnsServer.start(DNS_PORT, "*", BOARD_ADDRESS);
+    #endif
 
     #if defined(BAD_BOARD_REVISION)
     WiFi.setTxPower(WIFI_POWER_8_5dBm);
@@ -199,5 +205,8 @@ void setup() {
 }
 
 void loop() {
+    #if defined(CAPTIVE_PORTAL)
+    dnsServer.processNextRequest();
+    #endif
     server.handleClient();
 }
