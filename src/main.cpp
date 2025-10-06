@@ -158,7 +158,11 @@ void setup() {
         IPAddress(255, 255, 255, 0)
     );
     
-    if (!WiFi.softAP(ssid_method.c_str(), password_method.c_str(), channel_method)) {
+    if (!WiFi.softAP(
+    ssid_method.c_str(), 
+    password_method.c_str(),
+    channel_method,
+    HIDDEN_SSID)) {
         Serial.println("Failed to start Access Point!");
         halt_esp();
     }

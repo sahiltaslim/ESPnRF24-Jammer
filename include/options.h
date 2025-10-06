@@ -48,6 +48,7 @@
  * but will cause the project to default to channel 1,
  * and jam it's own access point.
  * 
+ * (x) HIDDEN_SSID: whenever to not broadcast the SSID
  * (x) BOARD_ADDRESS: IP Address of the board for 
  * hosting the webserver
  *
@@ -59,6 +60,7 @@
 #define DEFAULT_SSID ""
 #define DEFAULT_PASSWORD ""
 #define DEFAULT_CHANNEL 13
+#define HIDDEN_SSID false
 
 #define BOARD_ADDRESS IPAddress(192, 168, 0, 1)
 #define BAD_BOARD_REVISION 1
