@@ -117,29 +117,29 @@ void SPI_init() {
   fspi_ptr->setBitOrder(MSBFIRST);
   fspi_ptr->setDataMode(SPI_MODE0);
 
-  auto [radio1_ok, radio2_ok] = std::make_pair(false, false);
+  auto [radio0_ok, radio1_ok] = std::make_pair(false, false);
 
-  while (!radio1_ok || !radio2_ok) {
+  while (!radio0_ok || !radio1_ok) {
     Serial.println("Attempting to initialize radios...");
 
-    if (!radio1_ok && radio.begin(fspi_ptr)) {
+    if (!radio0_ok && radio.begin(fspi_ptr)) {
       Serial.println("Radio 0 successfully initialized!");
       radio1_ok = true;
-    } else if (!radio1_ok) {
+    } else if (!radio0_ok) {
       Serial.printf("Radio 0 failed to initialize. Retrying in %d milliseconds...\n",
         RADIO_POLLING_MS
       );
     }
-    if (!radio2_ok && radio1.begin(hspi_ptr)) {
+    if (!radio1_ok && radio1.begin(hspi_ptr)) {
       Serial.println("Radio 1 successfully initialized!");
-      radio2_ok = true;
-    } else if (!radio2_ok) {
+      radio1_ok = true;
+    } else if (!radio1_ok) {
       Serial.printf("Radio 1 failed to initialize. Retrying in %d milliseconds...\n",
         RADIO_POLLING_MS
       );
     }
 
-    if (!radio1_ok || !radio2_ok) {
+    if (!radio0_ok || !radio1_ok) {
       delay(RADIO_POLLING_MS);
     }
   }
