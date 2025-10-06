@@ -96,7 +96,7 @@ void SPI_init() {
   #endif
 
   #if defined(ALLOW_SLEEP)
-  toggleRadioSleep(radio, false, 1);
+  toggleRadioSleep(radio, false, 0);
   #endif
   hspi_ptr = new SPIClass(RADIO_SPI_BUS);
   hspi_ptr->begin(RADIO_SCK_PIN,
@@ -107,7 +107,7 @@ void SPI_init() {
   hspi_ptr->setDataMode(SPI_MODE0);
 
   #if defined(ALLOW_SLEEP)
-  toggleRadioSleep(radio1, false, 2);
+  toggleRadioSleep(radio1, false, 1);
   #endif
   fspi_ptr = new SPIClass(RADIO1_SPI_BUS);
   fspi_ptr->begin(RADIO1_SCK_PIN,
@@ -124,7 +124,7 @@ void SPI_init() {
 
     if (!radio0_ok && radio.begin(fspi_ptr)) {
       Serial.println("Radio 0 successfully initialized!");
-      radio1_ok = true;
+      radio0_ok = true;
     } else if (!radio0_ok) {
       Serial.printf("Radio 0 failed to initialize. Retrying in %d milliseconds...\n",
         RADIO_POLLING_MS
