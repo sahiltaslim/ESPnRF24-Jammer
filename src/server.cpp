@@ -21,7 +21,7 @@
 #include "src/server.h"
 #include "src/main.h"
 
-#include "preferences.h"
+#include "options.h"
 
 // Server methods
 int bluetooth_jam_method, 

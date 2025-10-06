@@ -2,4 +2,4 @@
 .vscode/
 .pio/
 
-#include/preferences.h
+#include/options.h

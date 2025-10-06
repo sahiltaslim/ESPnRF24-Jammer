@@ -15,7 +15,7 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-#include "preferences.h"
+#include "options.h"
 
 #if defined(HAS_OLED_SCREEN)
 auto getPowerLevelString() -> const char*;

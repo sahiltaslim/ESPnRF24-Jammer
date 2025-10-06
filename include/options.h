@@ -1,5 +1,5 @@
-#ifndef PREFERENCES_H
-#define PREFERENCES_H
+#ifndef OPTIONS_H
+#define OPTIONS_H
 
 /*
  * nRF24 radio pins.

@@ -34,12 +34,12 @@ For the componenets:
 
 - Solder the capacitors across the `VCC` and `GND` pins of each `nRF24` module
 - Wire the display/radio modules to your `ESP32` board according to the pinout
-and your pin configuration in `include/preferences.h`
+and your pin configuration in `include/options.h`
 
 ## Building
 
 1. Install VSCode and PlatformIO
-2. Edit preferences in `include/preferences.h`
+2. Edit preferences in `include/options.h`
 3. If using a different board, port it into `platformio.ini`
 4. Upload the code, and the SPIFFS filesystem image via platform tasks
 
